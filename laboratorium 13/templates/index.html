@@ -1,0 +1,10 @@
+{% extends "baza.html" %}
+
+{% block content %}
+	<h1>{{tytul}}</h1>
+	<p class="lead">{{tresc}}</p>
+	{% if current_user.is_authenticated %}
+		Witaj {{ current_user.name }}!
+	{% endif %}
+
+{% endblock %}
